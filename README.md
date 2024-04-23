@@ -12,7 +12,9 @@ El producto de software a ser producido es el Oracle Java Bot, un servicio de ch
 
 | Ventajas| Desventajas |
 | ----------- | ----------- |
-| ventajas.. | desventajas.. |
+| Es un lenguaje de programacion multiplataforma | Puede llegar a tener un rendimiento mas lento comparado con otros como C++ |
+| Cuenta con un sistema de seguridad incorporado | Puede requerir mas memoria que otros lenguajes |
+| Ofrece una gran cantidad de librerias y herramientas | Puede llegar a tener sobrecarga de codigo |
 
 - **Apache Maven:** Para la gestión de dependencias y automatización de la construcción del proyecto.
 
