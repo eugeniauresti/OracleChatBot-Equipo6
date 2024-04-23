@@ -28,6 +28,7 @@ El producto de software a ser producido es el Oracle Java Bot, un servicio de ch
 | Ventajas| Desventajas |
 | ----------- | ----------- |
 | Proporciona una API de bot y un marco de bot que esto puede simplificar el desarrollo e implementacion del bot | Es mas complicado de usar que otras plataformas (facebook, whatsapp) ya que el usuario tendra que aprender nuevos commandos |
+| Permite crear grupos, canales u otros bots a los propietarios del bot | No esta tan integrado con servicios de terceros | 
 
 - **Spring Boot:** Para el desarrollo del back-end del bot, utilizando Spring Boot para facilitar la creación de microservicios escalables.
 
