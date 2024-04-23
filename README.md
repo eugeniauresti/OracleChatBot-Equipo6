@@ -20,7 +20,8 @@ El producto de software a ser producido es el Oracle Java Bot, un servicio de ch
 
 | Ventajas| Desventajas |
 | ----------- | ----------- |
-| ventajas.. | desventajas.. |
+| Es mas facil la organizacion ya que todos los proyectos o trabajos se distribuyen como una estructura | Depende mucho de una conexion a una red WIFI |
+| Los archivos jar tambien son otra gran ventaja ya que al dejarlo en un repositorio centralizado y el uso de Snapshots de maven se puede llegar a tener todos los ultimos archivos jar para todos | El uso de la red no permite realizar cambios fuera ya que para esto se tendria que clonar el repositorio completo para que asi se puedan realizar los cambios o hacer otro proyecto totalmente independiente de maven |
 
 - **Telegram Bot API:** Para interactuar con el bot durante las pruebas.
 
