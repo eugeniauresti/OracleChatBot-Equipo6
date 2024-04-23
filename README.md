@@ -34,32 +34,35 @@ El producto de software a ser producido es el Oracle Java Bot, un servicio de ch
 
 | Ventajas| Desventajas |
 | ----------- | ----------- |
-| Hacen de un enfoque agil para el desarrollo de aplicaciones | La comunicacion de entre los microservicios puede ser compleja |
+| Hacen de un enfoque ágil para el desarrollo de aplicaciones | La comunicación de entre los microservicios puede ser compleja |
 | Los fallos en un servicio no llegan a afectar el funcionamiento del programa | Cada microservicio requiere su propia estructura |
 
 - **Oracle Cloud Infrastructure y Oracle Autonomous Database:** Para alojar la aplicación y la base de datos, asegurando el acceso durante las pruebas a los servicios en la nube de Oracle.
 
 | Ventajas| Desventajas |
 | ----------- | ----------- |
-| ventajas.. | desventajas.. |
+| Agiliza el proceso ya que proporciona la base de datos donde se almacenarán los datos | Llega a tener un espacio limitado después se empieza a cobrar si se ha pasado de ese límite |
 
 - **Herramientas de Pruebas:** Se utilizarán frameworks específicos para Java como JUnit para pruebas unitarias, y Selenium para pruebas de interfaz de usuario en Telegram.
 
 | Ventajas| Desventajas |
 | ----------- | ----------- |
-| ventajas.. | desventajas.. |
+| Aunque añade pasos adicionales al desarrollo reduce el tiempo y el costo al hacer pruebas unitarias | No llega a abordar todas las situaciones posibles |
+| Hay un aumento en la eficiencia en general | Puede llegar a requerir mas codigo |
 
 - **Kubernetes:** Es un administrador del sistema, en este se crea el contenedor en OCI incluyendo los fault domains y los docker images que ayudará a mantener la conectividad estable.
 
 | Ventajas| Desventajas |
 | ----------- | ----------- |
-| ventajas.. | desventajas.. |
+| Facilita la organización del servicio con pods | Llegan a ser incompatibles con las herramientas de Docker |
+| Una gran variedad de opciones de almacenamiento (SAN, locales y nubes públicas) | Implementación de un cluster manual llega a ser muy complejo |
 
 - **ReactJS:** Para el desarrollo de Front-End, que contiene la interfaz web para el acceso a la base de datos que contiene las tareas asignadas.
 
 | Ventajas| Desventajas |
 | ----------- | ----------- |
-| ventajas.. | desventajas.. |
+| Los componentes de React agilizan la creación de una interfaz | La biblioteca puede llegar a incrementar el tamaño de tu aplicación |
+| Las interfaces creadas con React garantizan una mejor experiencia para el usuario | Solo visualiza la interfaz, para el proyecto completo se necesita una pila de tecnología |
 
 
 ### Bibliotecas/frameworks:
