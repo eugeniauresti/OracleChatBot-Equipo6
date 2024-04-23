@@ -49,6 +49,19 @@ El producto de software a ser producido es el Oracle Java Bot, un servicio de ch
 | ----------- | ----------- |
 | ventajas.. | desventajas.. |
 
+- **Kubernetes:** Es un administrador del sistema, en este se crea el contenedor en OCI incluyendo los fault domains y los docker images que ayudará a mantener la conectividad estable.
+
+| Ventajas| Desventajas |
+| ----------- | ----------- |
+| ventajas.. | desventajas.. |
+
+- **ReactJS:** Para el desarrollo de Front-End, que contiene la interfaz web para el acceso a la base de datos que contiene las tareas asignadas.
+
+| Ventajas| Desventajas |
+| ----------- | ----------- |
+| ventajas.. | desventajas.. |
+
+
 ### Bibliotecas/frameworks:
 - Documentación API de Telegram. [Telegram](https://core.telegram.org/bots/api)
 - Documentación de Oracle Cloud Infrastructure (OCI) [OCI](https://docs.oracle.com/en-us/iaas/Content/home.htm)
