@@ -5,7 +5,8 @@ El producto de software a ser producido es el Oracle Java Bot, un servicio de ch
 
 | Ventajas| Desventajas |
 | ----------- | ----------- |
-| ventajas.. | desventajas.. |
+| Los contenedores en Docker pueden reducir el tiempo de implementacion a segundos | No se pueden usar proceso como cron y syslog en el contenedor |
+| Este soporta un enfoque de desarrollo agil y ayuda a hacer realidad la integracion e implementacion continuas | Existen cierto limites como la limpieza de los procesos despues de terminar con los procesos hijo
 
 - **Java SE Development Kit (JDK) 8:** Se utilizará Java Development Kit versión 1.8 para el desarrollo del bot.
 
