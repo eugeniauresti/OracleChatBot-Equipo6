@@ -73,3 +73,5 @@ El producto de software a ser producido es el Oracle Java Bot, un servicio de ch
 - Documentación de Spring Boot [Spring Boot](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/)
 - Documentación de Java SE Development Kit (JDK) 8 [JDK 8](https://docs.oracle.com/javase/8/docs/)
 - Documentación de Apache Maven [Maven](https://maven.apache.org/guides/index.html)
+- Documentación de Kubernetes [Kubernetes](https://kubernetes.io/docs/home/)
+- Documentación de ReactJS [ReactJS](https://legacy.reactjs.org)
