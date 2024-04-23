@@ -5,36 +5,37 @@ El producto de software a ser producido es el Oracle Java Bot, un servicio de ch
 
 | Ventajas| Desventajas |
 | ----------- | ----------- |
-| Los contenedores en Docker pueden reducir el tiempo de implementacion a segundos | No se pueden usar proceso como cron y syslog en el contenedor |
-| Este soporta un enfoque de desarrollo agil y ayuda a hacer realidad la integracion e implementacion continuas | Existen cierto limites como la limpieza de los procesos despues de terminar con los procesos hijo
+| Los contenedores en Docker pueden reducir el tiempo de implementación a segundos | No se pueden usar proceso como cron y syslog en el contenedor |
+| Este soporta un enfoque de desarrollo ágil y ayuda a hacer realidad la integración e implementación continuas | Existen cierto límites como la limpieza de los procesos después de terminar con los procesos hijo |
 
 - **Java SE Development Kit (JDK) 8:** Se utilizará Java Development Kit versión 1.8 para el desarrollo del bot.
 
 | Ventajas| Desventajas |
 | ----------- | ----------- |
-| Es un lenguaje de programacion multiplataforma | Puede llegar a tener un rendimiento mas lento comparado con otros como C++ |
-| Cuenta con un sistema de seguridad incorporado | Puede requerir mas memoria que otros lenguajes |
-| Ofrece una gran cantidad de librerias y herramientas | Puede llegar a tener sobrecarga de codigo |
+| Es un lenguaje de programación multiplataforma | Puede llegar a tener un rendimiento más lento comparado con otros como C++ |
+| Cuenta con un sistema de seguridad incorporado | Puede requerir más memoria que otros lenguajes |
+| Ofrece una gran cantidad de librerías y herramientas | Puede llegar a tener sobrecarga de código |
 
 - **Apache Maven:** Para la gestión de dependencias y automatización de la construcción del proyecto.
 
 | Ventajas| Desventajas |
 | ----------- | ----------- |
-| Es mas facil la organizacion ya que todos los proyectos o trabajos se distribuyen como una estructura | Depende mucho de una conexion a una red WIFI |
-| Los archivos jar tambien son otra gran ventaja ya que al dejarlo en un repositorio centralizado y el uso de Snapshots de maven se puede llegar a tener todos los ultimos archivos jar para todos | El uso de la red no permite realizar cambios fuera ya que para esto se tendria que clonar el repositorio completo para que asi se puedan realizar los cambios o hacer otro proyecto totalmente independiente de maven |
+| Es más fácil la organización ya que todos los proyectos o trabajos se distribuyen como una estructura | Depende mucho de una conexión a una red WIFI |
+| Los archivos jar también son otra gran ventaja ya que al dejarlo en un repositorio centralizado y el uso de Snapshots de maven se puede llegar a tener todos los últimos archivos jar para todos | El uso de la red no permite realizar cambios fuera ya que para esto se tendría que clonar el repositorio completo para que así se puedan realizar los cambios o hacer otro proyecto totalmente independiente de maven |
 
 - **Telegram Bot API:** Para interactuar con el bot durante las pruebas.
 
 | Ventajas| Desventajas |
 | ----------- | ----------- |
-| Proporciona una API de bot y un marco de bot que esto puede simplificar el desarrollo e implementacion del bot | Es mas complicado de usar que otras plataformas (facebook, whatsapp) ya que el usuario tendra que aprender nuevos commandos |
-| Permite crear grupos, canales u otros bots a los propietarios del bot | No esta tan integrado con servicios de terceros | 
+| Proporciona una API de bot y un marco de bot que esto puede simplificar el desarrollo e implementación del bot | Es más complicado de usar que otras plataformas (facebook, whatsapp) ya que el usuario tendrá que aprender nuevos comandos |
+| Permite crear grupos, canales u otros bots a los propietarios del bot | No está tan integrado con servicios de terceros | 
 
 - **Spring Boot:** Para el desarrollo del back-end del bot, utilizando Spring Boot para facilitar la creación de microservicios escalables.
 
 | Ventajas| Desventajas |
 | ----------- | ----------- |
-| ventajas.. | desventajas.. |
+| Hacen de un enfoque agil para el desarrollo de aplicaciones | La comunicacion de entre los microservicios puede ser compleja |
+| Los fallos en un servicio no llegan a afectar el funcionamiento del programa | Cada microservicio requiere su propia estructura |
 
 - **Oracle Cloud Infrastructure y Oracle Autonomous Database:** Para alojar la aplicación y la base de datos, asegurando el acceso durante las pruebas a los servicios en la nube de Oracle.
 
