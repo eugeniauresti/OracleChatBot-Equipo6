@@ -28,7 +28,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_GOOGLE_JAVA_FORMAT: false;
           #VALIDATE_JAVA: true;
-          JAVA_FILE_NAME: OracleChatBot-Equipo6/checkstyle.xml;
+          JAVA_FILE_NAME: checkstyle.xml;
           VALIDATE_NATURAL_LANGUAGE: false;
           VALIDATE_BASH: false;
           VALIDATE_GITLEAKS: false;
