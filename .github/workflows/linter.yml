@@ -11,24 +11,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Paso 1: Clonar el repositorio para acceder a los archivos en él
+      # Clonar el repositorio para acceder a los archivos en él
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      # Paso 2: Listar archivos en la carpeta .github/linters para verificar la presencia de checkstyle.xml
+      # Listar archivos en la carpeta .github/linters para verificar la presencia de checkstyle.xml
       - name: List files in .github/linters
         run: |
           echo "Listing contents of .github/linters:"
           ls -al .github/linters/
 
-      # Paso 3: Ejecutar Super-Linter
+      # Ejecutar Super-Linter
       - name: Run Super-Linter
         uses: super-linter/super-linter@v5.7.2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_GOOGLE_JAVA_FORMAT: false
           VALIDATE_JAVA_CHECKSTYLE: true
-          JAVA_FILE_NAME: .github/linters/checkstyle.xml
+          DEFAULT_WORKSPACE: ${{ github.workspace }}
+          JAVA_FILE_NAME: ${{ github.workspace }}/.github/linters/checkstyle.xml
           VALIDATE_NATURAL_LANGUAGE: false
           BASH_SEVERITY: error
           VALIDATE_GITLEAKS: false
