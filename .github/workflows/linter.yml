@@ -1,4 +1,4 @@
-# This is a basic workflow to help you get started with Actions
+# This is a basic workflow to help you get started with Action
 
 name: Linter
 
@@ -6,9 +6,9 @@ name: Linter
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
+    branches: [ "main", "jorge-nunez" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main", "jorge-nunez" ]
     
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -27,8 +27,10 @@ jobs:
           # To report GitHub Actions status checks
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_GOOGLE_JAVA_FORMAT: false;
-          VALIDATE_JAVA_CHECKSTYLE: false;
-          JAVA_FILE_NAME: checkstyle.xml;
+          #VALIDATE_JAVA: true;
+          JAVA_FILE_NAME: sun_checks.xml;
           VALIDATE_NATURAL_LANGUAGE: false;
-          BASH_SEVERITY: error;
+          VALIDATE_BASH: false;
           VALIDATE_GITLEAKS: false;
+          VALIDATE_JSCPD: false;
+          VALIDATE_MARKDOWN: false;
