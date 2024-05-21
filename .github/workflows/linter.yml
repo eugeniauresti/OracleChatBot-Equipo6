@@ -11,17 +11,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Clonar el repositorio para acceder a los archivos en él
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      # Listar archivos en la carpeta .github/linters para verificar la presencia de checkstyle.xml
       - name: List files in .github/linters
         run: |
           echo "Listing contents of .github/linters:"
           ls -al .github/linters/
 
-      # Ejecutar Super-Linter
       - name: Run Super-Linter
         uses: super-linter/super-linter@v5.7.2
         env:
