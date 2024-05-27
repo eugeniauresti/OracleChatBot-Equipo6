@@ -1,13 +1,6 @@
-FROM openjdk:22 as build
+FROM openjdk:11
 WORKDIR /app
-COPY mvnw .
-COPY .mvn .mvn
-COPY pom.xml .
-COPY src src
-RUN ./mvnw package -DskipTests
-
-FROM openjdk:22
-WORKDIR /app
+EXPOSE 8080
 COPY wallet /app/wallet
-COPY --from=build /app/target/Microservice_OAD-0.0.1-SNAPSHOT.jar /app/microservicio_database.jar
+COPY target/Microservice_OAD-0.0.1-SNAPSHOT.jar microservicio_database.jar
 ENTRYPOINT ["java", "-jar", "microservicio_database.jar"]
