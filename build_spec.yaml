@@ -4,9 +4,37 @@ timeoutInSeconds: 100
 shell: bash
 failImmediatelyOnError: true
 
-
+env:
+  exportedVariables:
+    - BuildServiceDemoVersion
 
 steps:
   - type: Command
     name: compile
     command: mvn compile
+
+  - type: Command
+    name: package
+    command: mvn package
+
+  - type: Command
+    name: check
+    command: ls -la target/
+
+  - type: Command
+    name: Dockerize
+    command: BuildServiceDemoVersion=`echo ${OCI_BUILD_RUN_ID} | rev | cut -c 1-7`
+             echo $BuildServiceDemoVersion
+             docker build -f Dockerfile -t chat-bot-e6 .
+
+outputArtifacts:
+
+ - name: projectArtifact
+   type: BINARY
+   location: /workspace/ORACLECHATBOT-EQUIPO6/target/Microservice_OAD-0.0.1-SNAPSHOT.jar
+
+ - name: chatBotE6
+   type: DOCKER-IMAGE
+   location: chat-bot-e6
+
+
