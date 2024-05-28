@@ -10,6 +10,10 @@ env:
 
 steps:
   - type: Command
+    name: check
+    command: hostname
+
+  - type: Command
     name: compile
     command: mvn compile
 
