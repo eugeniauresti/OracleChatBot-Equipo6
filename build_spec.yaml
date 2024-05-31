@@ -38,8 +38,13 @@ steps:
       echo $BuildServiceDemoVersion
       docker build -f Dockerfile -t chat-bot-e6 .
 
+  - type: Command
+    name: "List Docker Images"
+    command: docker images
+
 outputArtifacts:
   - name: chatBotE6
     type: DOCKER_IMAGE
     location: chat-bot-e6
+
 
