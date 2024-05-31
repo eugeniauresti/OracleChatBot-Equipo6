@@ -3,7 +3,7 @@ component: build
 timeoutInSeconds: 100
 shell: bash
 
- env:
+env:
   variables:
     - "JAVA_HOME" : "/usr/lib64/graalvm/graalvm22-ee-java17"
 
