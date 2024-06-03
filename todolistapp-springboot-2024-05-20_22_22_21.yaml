@@ -19,7 +19,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: todolistapp-backend-router
+  name: backend-router
 spec:
   selector:
     app: springboot
@@ -45,7 +45,7 @@ spec:
     spec:
       containers:
         - name: springboot
-          image: qro.ocir.io/ax42rf95uhky/proyecto_e6:${BuildServiceDemoVersion}
+          image: qro.ocir.io/ax42rf95uhky/proyecto_e6:anwrkwl
           imagePullPolicy: Always
           env:
             - name: db_user
