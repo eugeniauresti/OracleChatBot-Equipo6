@@ -45,7 +45,7 @@ spec:
     spec:
       containers:
         - name: springboot
-          image: qro.ocir.io/ax42rf95uhky/proyecto_e6:anwrkwl
+          image: qro.ocir.io/ax42rf95uhky/proyecto_e6:qerfiyt
           imagePullPolicy: Always
           env:
             - name: db_user
