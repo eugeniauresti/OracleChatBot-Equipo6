@@ -42,6 +42,12 @@ steps:
     name: "List Docker Images"
     command: docker images
 
+  - type: Command
+    name: "Undeploy Pods and Services"
+    command: |
+      kubectl -n mtdrworkshop delete deployment springboot-deployment
+      kubectl -n mtdrworkshop delete service springboot-service
+
 outputArtifacts:
   - name: chatBotE6
     type: DOCKER_IMAGE
