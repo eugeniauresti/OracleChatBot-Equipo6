@@ -13,9 +13,9 @@ steps:
       mv ./kubectl ~/.local/bin/kubectl
       export PATH=$PATH:~/.local/bin
 
- - type: Command
-    name: 'Access cluster'
-    command: kubectl proxy --port=8080
+  - type: Command
+      name: 'Access cluster'
+      command: kubectl proxy --port=8080
 
 
   - type: Command
