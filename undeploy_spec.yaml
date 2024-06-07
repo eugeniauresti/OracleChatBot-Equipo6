@@ -15,7 +15,9 @@ steps:
 
   - type: Command
     name: 'Access cluster'
-    command: kubectl proxy --port=8080
+    command: |
+      export PATH=$PATH:~/.local/bin
+      kubectl proxy --port=8080
 
 
   - type: Command
