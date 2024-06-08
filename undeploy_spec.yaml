@@ -14,8 +14,15 @@ steps:
       export PATH=$PATH:~/.local/bin
 
   - type: Command
+    name: 'Configure Kubeconfig'
+    command: |
+      export OCI_CLI_AUTH=instance_principal
+      oci ce cluster create-kubeconfig --cluster-id ocid1.devopsdeployenvironment.oc1.mx-queretaro-1.amaaaaaapsxhejqa3uwqn7qw5jmg4vcc3vaimkk5qdz4bun6rq3i6c2ned7a --file $HOME/.kube/config --region queretaro --token-version 2.0.0
+      export KUBECONFIG=$HOME/.kube/config
+
+  - type: Command
     name: Undeploy
     command: |
       export PATH=$PATH:~/.local/bin
-      kubectl --server=https://159.54.136.225:6443 --insecure-skip-tls-verify delete deployment springboot-deployment
-      kubectl --server=https://159.54.136.225:6443 --insecure-skip-tls-verify delete service
+      kubectl -n mtdrworkshop delete deployment springboot-deployment
+      kubectl -n mtdrworkshop delete service
