@@ -14,15 +14,8 @@ steps:
       export PATH=$PATH:~/.local/bin
 
   - type: Command
-    name: 'Access cluster'
-    command: |
-      export PATH=$PATH:~/.local/bin
-      kubectl proxy --port=8080 --server=https://159.54.136.225:6443
-
-
-  - type: Command
     name: Undeploy
     command: |
       export PATH=$PATH:~/.local/bin
-      kubectl -n mtdrworkshop delete deployment springboot-deployment
-      kubectl -n mtdrworkshop delete service
+      kubectl --server=https://159.54.136.225:6443 --insecure-skip-tls-verify delete deployment springboot-deployment
+      kubectl --server=https://159.54.136.225:6443 --insecure-skip-tls-verify delete service
