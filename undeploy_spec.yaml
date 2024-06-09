@@ -13,16 +13,18 @@ steps:
       mv ./kubectl ~/.local/bin/kubectl
       echo 'export PATH=$PATH:~/.local/bin' >> ~/.bashrc
       source ~/.bashrc
+      kubectl version --client
 
   - type: Command
     name: 'Access cluster'
     command: |
       source ~/.bashrc
-      kubectl proxy --port=8080 &
-      sleep 5  # Wait for the proxy to initialize
+      nohup kubectl proxy --port=8080 > proxy.log 2>&1 &
+      sleep 10  # Increase wait time to ensure proxy initialization
+      curl http://localhost:8080/api/
 
   - type: Command
-    name: Undeploy
+    name: 'Undeploy'
     command: |
       source ~/.bashrc
       kubectl -n mtdrworkshop delete deployment springboot-deployment
