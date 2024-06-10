@@ -17,8 +17,8 @@ steps:
     name: 'Access cluster'
     command: |
       export PATH=$PATH:~/.local/bin
-      kubectl proxy --port=8080 &
-      curl http://localhost:8080/api/
+      kubectl proxy --port=6443 &
+      curl http://159.54.136.225:6443/api/
 
 
   - type: Command
