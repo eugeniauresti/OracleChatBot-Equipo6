@@ -17,13 +17,14 @@ steps:
     name: 'Access cluster'
     command: |
       export PATH=$PATH:~/.local/bin
-      kubectl proxy --port=6443 &
-      curl http://159.54.136.225:6443/api/
-
+      mkdir -p $HOME/.kube
+      oci ce cluster create-kubeconfig --cluster-id ocid1.cluster.oc1.mx-queretaro-1.aaaaaaaac3wnoqwdgkrgohmtuoh7u5hajqhjvol437dosf5wtcb2xnpblxba --file $HOME/.kube/config --region mx-queretaro-1 --token-version 2.0.0  --kube-endpoint PRIVATE_ENDPOINT
+      export KUBECONFIG=$HOME/.kube/config
 
   - type: Command
     name: Undeploy
     command: |
       export PATH=$PATH:~/.local/bin
+      export KUBECONFIG=$HOME/.kube/config
       kubectl -n mtdrworkshop delete deployment springboot-deployment
       kubectl -n mtdrworkshop delete service
