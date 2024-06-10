@@ -11,21 +11,20 @@ steps:
       chmod +x kubectl
       mkdir -p ~/.local/bin
       mv ./kubectl ~/.local/bin/kubectl
-      echo 'export PATH=$PATH:~/.local/bin' >> ~/.bashrc
-      source ~/.bashrc
-      kubectl version --client
+      export PATH=$PATH:~/.local/bin
 
   - type: Command
     name: 'Access cluster'
     command: |
-      source ~/.bashrc
+      export PATH=$PATH:~/.local/bin
       kubectl proxy --port=8080 &
-      sleep 10  
+      sleep 10
       curl http://localhost:8080/api/
 
+
   - type: Command
-    name: 'Undeploy'
+    name: Undeploy
     command: |
-      source ~/.bashrc
+      export PATH=$PATH:~/.local/bin
       kubectl -n mtdrworkshop delete deployment springboot-deployment
       kubectl -n mtdrworkshop delete service
