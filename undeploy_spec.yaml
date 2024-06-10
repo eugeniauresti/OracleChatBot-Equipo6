@@ -19,8 +19,8 @@ steps:
     name: 'Access cluster'
     command: |
       source ~/.bashrc
-      nohup kubectl proxy --port=8080 > proxy.log 2>&1 &
-      sleep 10  # Increase wait time to ensure proxy initialization
+      kubectl proxy --port=8080 &
+      sleep 10  
       curl http://localhost:8080/api/
 
   - type: Command
